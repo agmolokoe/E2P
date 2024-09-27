@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div id="game-container">
+        <div id="choices">
+            <img id="rock" src="images/rock.png" alt="Rock">
+            <img id="paper" src="images/paper.png" alt="Paper">
+            <img id="scissors" src="images/scissors.png" alt="Scissors">
+        </div>
+        <div id="results">
+            <h2 id="result-text"></h2>
+            <button id="play-again" style="display:none">Play Again</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        // Check if the user is playing as a guest
+        const urlParams = new URLSearchParams(window.location.search);
+        const isGuest = urlParams.get('guest') === 'true';
+
+        if (isGuest) {
+            alert("You are playing as a guest. You won't earn BasetiCoin for this session.");
+        } else {
+            // Implement your Auth0 and MetaMask check here for authenticated users
+            console.log("Authenticated user, eligible for BasetiCoin rewards.");
+        }
+    </script>
+</body>
+</html>

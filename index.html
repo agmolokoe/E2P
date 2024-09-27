@@ -1,14 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <script src="node_modules/phaser/dist/phaser.js"></script>
-    <script src="main.js"></script>
+    <title>Rock Paper Scissors - BasetiCoin Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Rock Paper Scissors Game</h1>
-    <div id="game-container"></div>
+    <div class="landing-container">
+        <h1>Welcome to the Rock Paper Scissors Game</h1>
+        <p>Play and win BasetiCoin by challenging opponents in the classic game of Rock Paper Scissors!</p>
+        <p>Connect your MetaMask wallet to start earning BasetiCoin, or play as a guest without rewards.</p>
+        
+        <button id="connect-wallet" class="connect-button">Connect Wallet & Register</button>
+        <button id="play-as-guest" class="guest-button">Play as Guest</button>
+
+        <div id="auth-error" style="color: red; display: none;">Error: Please connect your wallet to continue.</div>
+    </div>
+
+    <script src="auth.js"></script> <!-- Script for Auth0 and MetaMask -->
 </body>
 </html>
